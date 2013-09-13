@@ -10,6 +10,7 @@ namespace OfficeManager.DAL
 {
     public class User
     {
+        [Key()]
         public int UserId { get; set; }
 
         [Required()]
@@ -21,9 +22,6 @@ namespace OfficeManager.DAL
         [Required()]
         public string Sex { get; set; }
 
-        public int LoginId { get; set; }
-
-        [ForeignKey("LoginId")]
-        public Login Login { get; set; }
+        public virtual Login Login { get; set; }
     }
 }
