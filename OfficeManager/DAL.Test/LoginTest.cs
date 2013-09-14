@@ -12,12 +12,12 @@ namespace DAL.Test
         {
             Console.WriteLine("Test Insert Login");
             User user = new User();
-            user.Name = "Alessandro";
-            user.Surname = "Sarcina";
+            user.Name = "rrrrrr";
+            user.Surname = "rrrrrrrrr";
             user.Sex = "M";
             user.Login = new Login
             {
-                Create = DateTime.Now,UserName = "alex",Password = "xxxx",Enabled = true
+                Create = DateTime.Now,UserName = "ttt",Password = "xxxx",Enabled = true
             };
             Login l = new Login();
             
