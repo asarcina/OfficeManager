@@ -23,12 +23,8 @@ namespace OfficeManager.DataLayerModel
             Surname = user.Surname;
             Sex = user.Sex;
             LoginId = user.LoginId;
-            Login= new LoginModel();
-            Login.LoginId = user.Login.LoginId;
-            Login.UserName = user.Login.UserName;
-            Login.Password = user.Login.Password;
-            Login.Create = user.Login.Create;
-            Login.Enabled = user.Login.Enabled;
+            Login= new LoginModel(user.Login);
+           
         }
 
         public UserModel()
