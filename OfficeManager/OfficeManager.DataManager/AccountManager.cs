@@ -3,32 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataModel;
 using OfficeManager.DAL;
+using OfficeManager.DataLayerModel;
 
 namespace OfficeManager.DataManager
 {
     public class AccountManager
     {
-        public int InsertAcount(UserModel account)
+        public int InsertAccount(UserModel account)
         {
             int result = 0;
-            if (account!= null && account.Login != null)
+            if (account != null && account.Login != null)
             {
                 try
                 {
                     User user = new User();
-                    user.Name = account.Name;
-                    user.Surname = account.Surname;
-                    user.Sex = account.Sex;
-                    user.Login=new Login();
-                    user.Login.UserName = account.Login.UserName;
-                    user.Login.Password = account.Login.Password;
-
+                    user = account.ToDal();
+                    User insert = user.Insert();
+                    result = insert.UserId;
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    
                     throw;
                 }
             }

@@ -22,6 +22,23 @@ namespace OfficeManager.DAL
         [Required()]
         public string Sex { get; set; }
 
-        public virtual Login Login { get; set; }
+        public int LoginId { get; set; }
+
+        [ForeignKey("LoginId")]
+        public Login Login { get; set; }
+
+        public User()
+        {
+            Login= new Login();
+        }
+        public User Insert()
+        {
+            using (DataContext db = new DataContext())
+            {
+                User user = db.Users.Add(this);
+                int saveChanges = db.SaveChanges();
+                return user;
+            }
+        }
     }
 }

@@ -53,6 +53,19 @@
     <Compile Include="AccountTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OfficeManager.DataLayerModel\OfficeManager.DataLayerModel.csproj">
+      <Project>{9914ef3b-5601-46ef-a0ca-941b9038aaff}</Project>
+      <Name>OfficeManager.DataLayerModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OfficeManager.DataManager\OfficeManager.DataManager.csproj">
+      <Project>{70aee825-84ce-4dea-a871-b5497a2a39d4}</Project>
+      <Name>OfficeManager.DataManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

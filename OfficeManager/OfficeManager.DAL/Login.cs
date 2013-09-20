@@ -26,7 +26,15 @@ namespace OfficeManager.DAL
         [Required()]
         public bool Enabled { get; set; }
 
-        public virtual User User { get; set; }
+        public Login Insert()
+        {
+            using (DataContext db = new DataContext())
+            {
+                Login login = db.Logins.Add(this);
+                int saveChanges = db.SaveChanges();
+                return login;
+            }
+        }
         
     }
 }

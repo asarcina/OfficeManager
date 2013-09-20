@@ -53,12 +53,6 @@
     <Compile Include="UserModelTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataModel\OfficeManager.DataModel.csproj">
-      <Project>{9914ef3b-5601-46ef-a0ca-941b9038aaff}</Project>
-      <Name>OfficeManager.DataModel</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

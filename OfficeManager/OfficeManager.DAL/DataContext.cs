@@ -12,9 +12,10 @@ namespace OfficeManager.DAL
         public DbSet<User> Users { get; set; }
         public DbSet<Login> Logins { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        public DataContext()
+            : base("OfficeManagerDB")
         {
-            modelBuilder.Entity<User>().HasRequired(t => t.Login).WithRequiredPrincipal(t => t.User);
+            
         }
     }
 }

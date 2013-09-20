@@ -43,13 +43,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataModel\OfficeManager.DataModel.csproj">
-      <Project>{9914ef3b-5601-46ef-a0ca-941b9038aaff}</Project>
-      <Name>OfficeManager.DataModel</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OfficeManager.DAL\OfficeManager.DAL.csproj">
       <Project>{9a5cb0b0-5575-4693-963b-b3df9f01f24b}</Project>
       <Name>OfficeManager.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OfficeManager.DataLayerModel\OfficeManager.DataLayerModel.csproj">
+      <Project>{9914ef3b-5601-46ef-a0ca-941b9038aaff}</Project>
+      <Name>OfficeManager.DataLayerModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
