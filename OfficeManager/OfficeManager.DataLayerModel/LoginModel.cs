@@ -14,11 +14,15 @@ namespace OfficeManager.DataLayerModel
       
         public LoginModel(Login login)
         {
+            if (login != null)
+            {
             LoginId = login.LoginId;
             UserName = login.UserName;
             Password = login.Password;
             Create = login.Create;
-            Enabled = login.Enabled;
+            Enabled = login.Enabled; 
+            }
+            
         }
         public Login ToDal()
         {

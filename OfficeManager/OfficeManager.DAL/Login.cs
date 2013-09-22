@@ -35,6 +35,6 @@ namespace OfficeManager.DAL
                 return login;
             }
         }
-        
+
     }
 }
