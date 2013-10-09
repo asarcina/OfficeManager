@@ -55,11 +55,20 @@
   <ItemGroup>
     <Compile Include="LoginTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OfficeManager.DAL\OfficeManager.DAL.csproj">
       <Project>{9a5cb0b0-5575-4693-963b-b3df9f01f24b}</Project>
       <Name>OfficeManager.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OfficeManager.DataLayerModel\OfficeManager.DataLayerModel.csproj">
+      <Project>{9914EF3B-5601-46EF-A0CA-941B9038AAFF}</Project>
+      <Name>OfficeManager.DataLayerModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OfficeManager.DataManager\OfficeManager.DataManager.csproj">
+      <Project>{70AEE825-84CE-4DEA-A871-B5497A2A39D4}</Project>
+      <Name>OfficeManager.DataManager</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

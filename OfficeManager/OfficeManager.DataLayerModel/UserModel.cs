@@ -18,12 +18,19 @@ namespace OfficeManager.DataLayerModel
 
         public UserModel(User user)
         {
-            UserId = user.UserId;
-            Name = user.Name;
-            Surname = user.Surname;
-            Sex = user.Sex;
-            LoginId = user.LoginId;
-            Login= new LoginModel(user.Login);
+            if (user!=null)
+            {
+                UserId = user.UserId;
+                Name = user.Name;
+                Surname = user.Surname;
+                Sex = user.Sex;
+                LoginId = user.LoginId;
+                Login = new LoginModel(user.Login);
+            }
+            else
+            {
+                Login= new LoginModel();
+            }
            
         }
 

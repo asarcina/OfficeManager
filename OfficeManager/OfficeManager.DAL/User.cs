@@ -31,14 +31,6 @@ namespace OfficeManager.DAL
         {
             Login= new Login();
         }
-        public User Insert()
-        {
-            using (DataContext db = new DataContext())
-            {
-                User user = db.Users.Add(this);
-                int saveChanges = db.SaveChanges();
-                return user;
-            }
-        }
+        
     }
 }

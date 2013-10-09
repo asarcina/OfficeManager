@@ -5,13 +5,13 @@ namespace OfficeManager.DAL.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class OfficeManager : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(OfficeManager));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201309201547395_OfficeManager"; }
+            get { return "201310081225069_Initial"; }
         }
         
         string IMigrationMetadata.Source

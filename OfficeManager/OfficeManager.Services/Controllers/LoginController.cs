@@ -19,22 +19,12 @@ namespace OfficeManager.Services.Controllers
         /// <returns></returns>
         public Login GetLoginById(int id)
         {
-            AccountManager accountManager = new AccountManager();
-            LoginModel loginById = accountManager.GetLoginById(id);
-            Login result = new Login(loginById);
-            return result;
+           throw new NotImplementedException();
         }
 
         public List<Login> GetLogins()
         {
-            AccountManager accountManager = new AccountManager();
-            List<LoginModel> logins=accountManager.GetLogins();
-            List<Login> result= new List<Login>();
-            foreach (LoginModel login in logins)
-            {
-                result.Add(new Login(login));
-            }
-            return result;
+            throw new NotImplementedException();
         } 
     }
 }

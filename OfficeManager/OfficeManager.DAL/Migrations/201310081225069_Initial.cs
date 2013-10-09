@@ -3,7 +3,7 @@ namespace OfficeManager.DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class OfficeManager : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
