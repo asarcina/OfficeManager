@@ -16,40 +16,10 @@ namespace OfficeManager.DataLayerModel
         public int LoginId { get; set; }
         public LoginModel Login { get; set; }
 
-        public UserModel(User user)
-        {
-            if (user!=null)
-            {
-                UserId = user.UserId;
-                Name = user.Name;
-                Surname = user.Surname;
-                Sex = user.Sex;
-                LoginId = user.LoginId;
-                Login = new LoginModel(user.Login);
-            }
-            else
-            {
-                Login= new LoginModel();
-            }
-           
-        }
-
         public UserModel()
         {
             Login = new LoginModel();
         }
-
-        public User ToDal()
-        {
-            User result= new User();
-            result.LoginId = this.LoginId;
-            result.Name = this.Name;
-            result.Surname = this.Surname;
-            result.Sex = this.Sex;
-            result.UserId = this.UserId;
-            result.Login = this.Login.ToDal();
-            return result;
-        }
-
+        
     }
 }

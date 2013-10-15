@@ -11,12 +11,21 @@ namespace DAL.Test
     {
         public int IdUser;
         public string ParamSearch;
+        public UserModel newModel;
 
         [TestInitialize]
         public void Init()
         {
             IdUser = 2;
             ParamSearch = "Sarcina";
+            LoginModel newLogin= new LoginModel
+                                 {
+                                     Create = DateTime.Now,Enabled = true,Password ="cifrata",UserName = "username"
+                                 };
+            newModel= new UserModel
+                                {
+                                    Login = newLogin,Name = "Tizio",Surname = "Caio",Sex = "M"
+                                };
         }
         
         [TestMethod]
@@ -49,6 +58,15 @@ namespace DAL.Test
             {
                 Console.WriteLine(model.Surname);
             }
+        }
+       
+        [TestMethod]
+        public void InsertNewUser()
+        {
+            UserManager manager = new UserManager();
+            int inserted = manager.Insert(newModel);
+            Assert.IsTrue(inserted>0);
+            Console.WriteLine("Utente inserito correttamente {0}",inserted);
         }
     }
 }

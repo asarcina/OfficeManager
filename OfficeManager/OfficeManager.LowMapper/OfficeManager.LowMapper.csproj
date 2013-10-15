@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{70AEE825-84CE-4DEA-A871-B5497A2A39D4}</ProjectGuid>
+    <ProjectGuid>{3F99B998-615A-47B7-9A25-76475FA78534}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OfficeManager.DataManager</RootNamespace>
-    <AssemblyName>OfficeManager.DataManager</AssemblyName>
+    <RootNamespace>OfficeManager.LowMapper</RootNamespace>
+    <AssemblyName>OfficeManager.LowMapper</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,26 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountManager.cs" />
+    <Compile Include="DownMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LowMapper.Test\LowMapper.Test.csproj">
-      <Project>{5c600ee6-8c67-4287-ba0d-0c4b7e6f1553}</Project>
-      <Name>LowMapper.Test</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OfficeManager.DAL\OfficeManager.DAL.csproj">
-      <Project>{9a5cb0b0-5575-4693-963b-b3df9f01f24b}</Project>
+      <Project>{9A5CB0B0-5575-4693-963B-B3DF9F01F24B}</Project>
       <Name>OfficeManager.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\OfficeManager.DataLayerModel\OfficeManager.DataLayerModel.csproj">
-      <Project>{9914ef3b-5601-46ef-a0ca-941b9038aaff}</Project>
+      <Project>{9914EF3B-5601-46EF-A0CA-941B9038AAFF}</Project>
       <Name>OfficeManager.DataLayerModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OfficeManager.LowMapper\OfficeManager.LowMapper.csproj">
-      <Project>{3F99B998-615A-47B7-9A25-76475FA78534}</Project>
-      <Name>OfficeManager.LowMapper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
