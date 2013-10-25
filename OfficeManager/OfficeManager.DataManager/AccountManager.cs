@@ -11,7 +11,7 @@ namespace OfficeManager.DataManager
 {
     public class AccountManager
     {
-        public int InsertAccount(UserModel account)
+        public int CheckAccount(UserModel account)
         {
             int result = 0;
             //TODO

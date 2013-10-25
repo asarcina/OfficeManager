@@ -13,10 +13,12 @@ namespace OfficeManager.DataManager
     public class UserManager
     {
         private readonly DownMapper mapper;
+        private readonly LoginManager loginManager;
 
         public UserManager()
         {
-            mapper= new DownMapper();
+            mapper = new DownMapper();
+            loginManager = new LoginManager();
         }
 
         public UserModel GetUserById(int id)
@@ -55,11 +57,15 @@ namespace OfficeManager.DataManager
 
             using (UnitOfWork uow = new UnitOfWork())
             {
+                //TODO: Verificare univocità alcune voci di User e Login
+                if (loginManager.LoginExist(user.Login))
+                {
+                    return 0;
+                }
                 uow.UserRepository.Insert(user);
                 uow.Save();
                 return user.UserId;
             }
-            return 0;
         }
     }
 }

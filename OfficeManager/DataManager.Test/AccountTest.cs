@@ -9,7 +9,7 @@ namespace DataManager.Test
     public class AccountTest
     {
         [TestMethod]
-        public void InsertUser()
+        public void CheckAccount()
         {
             AccountManager m = new AccountManager();
             UserModel user = new UserModel();
@@ -20,7 +20,7 @@ namespace DataManager.Test
             user.Login.Enabled = true;
             user.Login.Password = "password";
             user.Login.UserName = "username";
-            int insertAcount = m.InsertAccount(user);
+            int insertAcount = m.CheckAccount(user);
         }
     }
 }
