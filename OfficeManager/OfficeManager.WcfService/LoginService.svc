@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="OfficeManager.WcfService.LoginService" CodeBehind="LoginService.svc.cs" %>
